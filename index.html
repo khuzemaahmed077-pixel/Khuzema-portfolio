@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khuzema — Brand & Identity Design</title>
+<meta name="description" content="Logo design, brand identity, and hand-built vector work by Khuzema — precision-driven design for startups and small businesses.">
+<meta property="og:title" content="Khuzema — Brand & Identity Design">
+<meta property="og:description" content="Logo design, brand identity, and hand-built vector work — every mark built by hand in Illustrator, not auto-traced.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/Fluxo-Favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14213D;
+  --paper:#F7F5EF;
+  --paper2:#EFEBE1;
+  --teal:#2A7F79;
+  --copper:#B5651D;
+  --grey:#6B6558;
+  --line: rgba(20,33,61,0.14);
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter', sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3{
+  font-family:'Fraunces', serif;
+  font-weight:500;
+  letter-spacing:-0.01em;
+}
+.mono{
+  font-family:'IBM Plex Mono', monospace;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+}
+a{color:inherit;}
+
+/* ---------- signature thread ---------- */
+#thread{
+  position:fixed; top:0; left:0; width:100%; height:100%;
+  pointer-events:none; z-index:0;
+}
+#thread svg{width:100%; height:100%;}
+#thread path{
+  fill:none; stroke:var(--teal); stroke-width:1.5; opacity:0.35;
+  stroke-dasharray:6 6;
+}
+#thread circle{fill:var(--copper); opacity:0.5;}
+
+.wrap{
+  max-width:920px; margin:0 auto; padding:0 28px;
+  position:relative; z-index:1;
+}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky; top:0;
+  background:rgba(247,245,239,0.88);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+  z-index:10;
+}
+nav .wrap{
+  display:flex; justify-content:space-between; align-items:center;
+  padding-top:18px; padding-bottom:18px;
+}
+.nav-mark{font-family:'Fraunces', serif; font-size:1.1rem; font-weight:600;}
+.nav-links{display:flex; gap:28px;}
+.nav-links a{font-size:0.82rem; text-decoration:none;}
+@media(max-width:600px){
+  .nav-links{gap:16px;}
+  .nav-links a{font-size:0.72rem;}
+}
+
+/* ---------- hero ---------- */
+header.hero{
+  padding:96px 0 72px;
+  position:relative;
+}
+.eyebrow{
+  font-size:0.72rem; color:var(--teal); margin-bottom:22px;
+  display:flex; align-items:center; gap:10px;
+}
+.eyebrow::before{
+  content:""; width:22px; height:1px; background:var(--teal);
+  display:inline-block;
+}
+h1.title{
+  font-size:clamp(2.4rem, 6vw, 4.1rem);
+  line-height:1.04;
+  max-width:11ch;
+}
+h1.title em{
+  font-style:italic; color:var(--teal);
+}
+.hero-sub{
+  margin-top:26px; max-width:46ch; font-size:1.05rem; line-height:1.6;
+  color:#3a3630;
+}
+.available{
+  margin-top:26px; font-size:0.7rem; color:var(--teal);
+  display:inline-flex; align-items:center; gap:8px;
+}
+.available::before{
+  content:""; width:7px; height:7px; border-radius:50%;
+  background:var(--teal); display:inline-block;
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{
+  0%{opacity:1;} 50%{opacity:0.35;} 100%{opacity:1;}
+}
+.hero-cta{
+  margin-top:24px; display:flex; gap:14px; flex-wrap:wrap;
+}
+.btn{
+  font-family:'IBM Plex Mono', monospace; font-size:0.78rem;
+  text-transform:uppercase; letter-spacing:0.05em;
+  padding:13px 22px; text-decoration:none; display:inline-block;
+  border:1px solid var(--ink);
+}
+.btn.primary{background:var(--ink); color:var(--paper);}
+.btn.ghost{background:transparent; color:var(--ink);}
+.btn.primary:hover{background:var(--teal); border-color:var(--teal);}
+.btn.ghost:hover{border-color:var(--teal); color:var(--teal);}
+
+/* ---------- section shell ---------- */
+section{
+  padding:70px 0;
+  border-top:1px solid var(--line);
+  position:relative;
+}
+.section-head{
+  display:flex; justify-content:space-between; align-items:baseline;
+  margin-bottom:44px; flex-wrap:wrap; gap:10px;
+}
+.section-head .mono{font-size:0.74rem; color:var(--grey);}
+.section-head h2{font-size:clamp(1.5rem, 3.4vw, 2rem);}
+
+/* ---------- about / diagnosis panel ---------- */
+.diagnosis{
+  background:var(--paper2); border:1px solid var(--line);
+  padding:32px; display:grid; grid-template-columns:1fr 1fr; gap:28px;
+}
+@media(max-width:640px){ .diagnosis{grid-template-columns:1fr;} }
+.diagnosis dt{font-size:0.7rem; color:var(--teal); font-family:'IBM Plex Mono', monospace; text-transform:uppercase; margin-bottom:6px;}
+.diagnosis dd{font-size:0.95rem; line-height:1.55; color:#3a3630;}
+.diagnosis .field{margin-bottom:20px;}
+.diagnosis .field:last-child{margin-bottom:0;}
+
+/* ---------- case files (portfolio) ---------- */
+.case{
+  display:grid; grid-template-columns:120px 1fr; gap:24px;
+  padding:36px 0; border-bottom:1px solid var(--line); align-items:start;
+}
+.case:last-child{border-bottom:none;}
+@media(max-width:600px){ .case{grid-template-columns:1fr;} }
+.case-num{
+  font-family:'Fraunces', serif; font-size:2.6rem; color:var(--line); line-height:1;
+}
+.case h3{font-size:1.2rem; margin-bottom:8px;}
+.case p{font-size:0.92rem; line-height:1.6; color:#3a3630; max-width:60ch;}
+.case p + p{margin-top:10px;}
+.case .tag{
+  display:inline-block; margin-top:12px; font-size:0.68rem;
+  font-family:'IBM Plex Mono', monospace; text-transform:uppercase;
+  color:var(--copper); border:1px solid rgba(181,101,29,0.35); padding:3px 9px;
+}
+.case .placeholder{
+  margin-top:16px; height:150px; border:1px dashed var(--line);
+  display:flex; align-items:center; justify-content:center;
+  font-size:0.7rem; font-family:'IBM Plex Mono', monospace; color:var(--grey);
+  background:repeating-linear-gradient(135deg, rgba(20,33,61,0.03) 0 10px, transparent 10px 20px);
+}
+.case .shot{
+  margin-top:16px; border:1px solid var(--line); background:#ffffff;
+  padding:22px; display:flex; align-items:center; justify-content:center;
+}
+.case .shot img{ max-width:100%; max-height:220px; display:block; }
+.case .shot.wide img{ max-height:130px; }
+
+.case .process{ margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; }
+.case .process figure{ margin:0; width:calc(33.333% - 7px); min-width:110px; flex:1 1 140px; }
+.case .process .frame{
+  border:1px solid var(--line); background:#ffffff; padding:6px;
+  display:flex; align-items:center; justify-content:center; height:120px; overflow:hidden;
+}
+.case .process img{ max-width:100%; max-height:100%; object-fit:contain; filter:grayscale(1); }
+.case .process figcaption{
+  margin-top:6px; font-size:0.62rem; font-family:'IBM Plex Mono', monospace;
+  text-transform:uppercase; letter-spacing:0.03em; color:var(--grey); text-align:center;
+}
+
+/* ---------- featured case (NOIR / Dating Apps) — self-contained accent theming ---------- */
+.case.featured{
+  --accent: var(--teal);
+  --accent-soft: rgba(42,127,121,0.08);
+  padding:36px 28px;
+  background:var(--accent-soft);
+  border:1px solid var(--line);
+  border-left:3px solid var(--accent);
+  margin-bottom:8px;
+}
+.case.featured .case-num{ color:var(--accent); opacity:0.35; }
+.case.featured .tag{ color:var(--accent); border-color:color-mix(in srgb, var(--accent) 40%, transparent); }
+.case.featured .kicker{
+  font-family:'IBM Plex Mono', monospace; font-size:0.66rem; text-transform:uppercase;
+  letter-spacing:0.05em; color:var(--accent); margin-bottom:10px; display:block;
+}
+
+/* NOIR — coffee-brand palette (black / brown / cream / copper) */
+.case.noir{
+  --accent:#5C3D2E;
+  --accent-soft:#F0E6D6;
+}
+.case.noir .shot{ background:#F0E6D6; border-color:rgba(92,61,46,0.25); }
+
+/* Dating Apps — muted rose/teal editorial palette pulled from the carousel */
+.case.dating{
+  --accent:#C2185B;
+  --accent-soft:#FBF1E9;
+}
+.case.dating .shot{ background:#FBF1E9; border-color:rgba(194,24,91,0.2); }
+
+.case.featured .swatches{ display:flex; gap:8px; margin-top:14px; flex-wrap:wrap; }
+.case.featured .swatch{
+  display:flex; align-items:center; gap:6px;
+  font-family:'IBM Plex Mono', monospace; font-size:0.62rem; color:var(--grey);
+  border:1px solid var(--line); padding:4px 8px; background:#fff;
+}
+.case.featured .swatch .dot{ width:10px; height:10px; border-radius:50%; display:inline-block; flex-shrink:0; }
+
+.case.featured .carousel{
+  margin-top:16px; display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;
+}
+@media(max-width:640px){ .case.featured .carousel{ grid-template-columns:repeat(2,1fr); } }
+.case.featured .carousel figure{ margin:0; }
+.case.featured .carousel .frame{
+  border:1px solid var(--line); background:#fff; overflow:hidden; aspect-ratio:1/1;
+  display:flex; align-items:center; justify-content:center;
+}
+.case.featured .carousel img{ width:100%; height:100%; object-fit:cover; }
+.case.featured .carousel figcaption{
+  margin-top:6px; font-size:0.62rem; font-family:'IBM Plex Mono', monospace;
+  text-transform:uppercase; letter-spacing:0.02em; color:var(--grey); text-align:center;
+}
+.case.featured .carousel figure.full{ grid-column:1 / -1; }
+.case.featured .carousel figure.full .frame{ aspect-ratio:auto; height:auto; padding:16px; }
+.case.featured .carousel figure.full img{ object-fit:contain; width:100%; height:auto; max-height:none; }
+
+.case.featured .breakdown{
+  margin-top:22px; display:grid; grid-template-columns:1fr 1fr; gap:22px;
+  padding-top:20px; border-top:1px dashed var(--line);
+}
+@media(max-width:640px){ .case.featured .breakdown{ grid-template-columns:1fr; } }
+.case.featured .breakdown h4{
+  font-family:'IBM Plex Mono', monospace; font-size:0.66rem; text-transform:uppercase;
+  letter-spacing:0.04em; color:var(--accent); margin-bottom:8px;
+}
+.case.featured .breakdown p{ font-size:0.86rem; line-height:1.6; color:#3a3630; }
+.case.featured .pull-quote{
+  margin-top:18px; padding:14px 18px; border-left:2px solid var(--accent);
+  font-family:'Fraunces', serif; font-style:italic; font-size:0.98rem; color:var(--ink);
+  background:#fff;
+}
+
+/* ---------- credentials ---------- */
+.creds{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line); border:1px solid var(--line);}
+@media(max-width:600px){ .creds{grid-template-columns:1fr;} }
+.cred{
+  background:var(--paper); padding:22px 24px; display:flex; flex-direction:column;
+}
+.cred .mono{font-size:0.66rem; color:var(--teal); display:block; margin-bottom:6px;}
+.cred h4{font-size:0.98rem; font-weight:500; font-family:'Fraunces', serif;}
+.cred p{font-size:0.8rem; color:var(--grey); margin-top:4px;}
+.cred-footer{
+  margin-top:16px; padding-top:14px; border-top:1px dashed var(--line);
+  display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;
+}
+.cred-id{ font-family:'IBM Plex Mono', monospace; font-size:0.66rem; color:var(--grey); }
+.cred-links{display:flex; gap:14px;}
+.cred-links a{
+  font-family:'IBM Plex Mono', monospace; font-size:0.68rem; text-transform:uppercase;
+  letter-spacing:0.03em; color:var(--copper); text-decoration:none;
+  border-bottom:1px solid rgba(181,101,29,0.35); padding-bottom:1px;
+}
+.cred-links a:hover{color:var(--teal); border-color:var(--teal);}
+.creds-note{
+  margin-top:20px; font-size:0.78rem; color:var(--grey); line-height:1.6;
+}
+.creds-note a{color:var(--teal); text-decoration:underline; text-underline-offset:3px;}
+
+/* ---------- gigs / services ---------- */
+.services{display:grid; gap:1px; background:var(--line); border:1px solid var(--line);}
+.service{ background:var(--paper); padding:26px 28px; }
+.service h4{font-size:1.02rem; font-weight:500; font-family:'Fraunces', serif;}
+.service p{font-size:0.84rem; color:var(--grey); margin-top:4px;}
+
+/* ---------- process ---------- */
+.process-steps{ display:grid; gap:1px; background:var(--line); border:1px solid var(--line); }
+.pstep{ background:var(--paper); padding:26px 28px; display:grid; grid-template-columns:44px 1fr; gap:18px; align-items:start; }
+.pstep .pnum{
+  font-family:'IBM Plex Mono', monospace; font-size:0.78rem; color:var(--teal);
+  border:1px solid rgba(42,127,121,0.3); width:32px; height:32px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+}
+.pstep h4{ font-size:1rem; font-weight:500; font-family:'Fraunces', serif; margin-bottom:4px; }
+.pstep p{ font-size:0.86rem; color:var(--grey); line-height:1.6; }
+.process-note{
+  margin-top:20px; font-size:0.82rem; color:var(--grey); line-height:1.6;
+  padding:16px 18px; background:var(--paper2); border:1px solid var(--line);
+}
+.process-note strong{ color:var(--ink); }
+
+/* ---------- skills to polish ---------- */
+.skill-row{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:16px 0; border-bottom:1px solid var(--line); gap:16px;
+}
+.skill-row:last-child{border-bottom:none;}
+.skill-row .name{font-size:0.95rem;}
+.bar-track{width:140px; height:5px; background:var(--paper2); position:relative; flex-shrink:0;}
+.bar-fill{position:absolute; top:0; left:0; height:100%; background:var(--teal);}
+@media(max-width:560px){ .skill-row{flex-wrap:wrap;} .bar-track{width:100px;} }
+
+/* ---------- footer / contact ---------- */
+footer{ padding:70px 0 90px; border-top:1px solid var(--line); }
+footer h2{font-size:clamp(1.8rem,4vw,2.6rem); max-width:16ch;}
+footer .hero-sub{margin-top:18px;}
+.contact-links{margin-top:34px; display:flex; gap:20px; flex-wrap:wrap;}
+.contact-links a{font-size:0.85rem; text-decoration:underline; text-underline-offset:4px;}
+.foot-note{margin-top:60px; font-size:0.7rem; color:var(--grey); font-family:'IBM Plex Mono', monospace;}
+</style>
+</head>
+<body>
+
+<div id="thread">
+<svg preserveAspectRatio="none" viewBox="0 0 100 3000">
+<path id="threadPath" d="M 10,0 C 40,150 -10,300 20,500 C 45,650 5,850 30,1050 C 50,1200 10,1400 25,1600 C 40,1780 5,1950 20,2150 C 35,2320 8,2500 22,2700 L 22,3000" />
+</svg>
+</div>
+
+<nav>
+<div class="wrap">
+<div class="nav-mark">Khuzema</div>
+<div class="nav-links">
+<a href="#work">Work</a>
+<a href="#process">Process</a>
+<a href="#credentials">Credentials</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+
+<header class="hero">
+<div class="wrap">
+<div class="eyebrow mono">Brand &amp; Identity Designer</div>
+<h1 class="title">Identities built with <em>precision</em>, not guesswork.</h1>
+<p class="hero-sub">I design logos, brand identities, and visual content systems for startups and small businesses — every mark built by hand in Illustrator, not auto-traced, and every brief read closely before the canvas opens. That habit comes from a research background as much as a design one.</p>
+<div class="available mono">Available for new projects</div>
+<div class="hero-cta">
+<a href="#work" class="btn primary">View case files</a>
+<a href="https://www.upwork.com/freelancers/~01dfe0c882c23f804e" target="_blank" rel="noopener" class="btn ghost">Start a project</a>
+</div>
+</div>
+</header>
+
+<section id="about">
+<div class="wrap">
+<div class="section-head">
+<h2>Intake notes</h2>
+<span class="mono">About</span>
+</div>
+<div class="diagnosis">
+<div>
+<div class="field">
+<dt>Background</dt>
+<dd>MBBS-trained, now working in design. That path shows up as a habit more than a talking point: gather the right inputs before producing anything.</dd>
+</div>
+<div class="field">
+<dt>Core skill</dt>
+<dd>Logo and brand identity design in Adobe Illustrator and Canva, with a focus on vector cleanliness — hand-built anchor points, not auto-trace shortcuts — plus research-to-visual translation for content-heavy formats like Instagram carousels.</dd>
+</div>
+</div>
+<div>
+<div class="field">
+<dt>Differentiator</dt>
+<dd>An AI-fluent design process — used to pressure-test ideas and catch redundancy, never to generate the work itself — plus a real edge for health, wellness, and research-adjacent brands that most designers can't speak to as credibly.</dd>
+</div>
+<div class="field">
+<dt>In progress</dt>
+<dd>UI/UX and Webflow (12-week program, underway) — added to the offering once real projects exist to back it up.</dd>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="work">
+<div class="wrap">
+<div class="section-head">
+<h2>Case files</h2>
+<span class="mono">Selected work</span>
+</div>
+
+<div class="case featured noir">
+<div class="case-num">01</div>
+<div>
+<span class="kicker">Full identity system</span>
+<h3>NOIR — Premium Cold Brew Coffee Brand</h3>
+<p><strong>Problem.</strong> Cold brew branding tends to default to one of two modes: sterile minimalism or try-hard "cool café" energy. Neither earns trust with someone who wants their coffee to feel considered, not decorated. Audience: urban professionals, 22–32, people who read a room before they walk into it.</p>
+<p><strong>Concept.</strong> NOIR is built around a single idea — identity is something you carry into a space, not something a brand hands you. The mark's central "i" is rendered as a figure standing in a doorway: a hat, a single eye in copper, a body reduced to one upright stroke. It's the one letter that doesn't match its neighbors, deliberately — identity as the thing that stands apart, even inside a system built to look unified.</p>
+<span class="tag">Brand identity · Coffee</span>
+
+<div class="shot"><img src="assets/case-studies/noir-wordmark.png" alt="NOIR wordmark — block letterforms in brown and cream with the central i rendered as a figure in a doorway, hat and copper eye"></div>
+
+<div class="swatches">
+<span class="swatch"><span class="dot" style="background:#000000;"></span>000000 — hat, accent only</span>
+<span class="swatch"><span class="dot" style="background:#5C3D2E;"></span>5C3D2E — primary block color</span>
+<span class="swatch"><span class="dot" style="background:#B5754A;"></span>B5754A — copper, accent only</span>
+<span class="swatch"><span class="dot" style="background:#F0E6D6; border:1px solid rgba(92,61,46,0.3);"></span>F0E6D6 — cream, negative space</span>
+</div>
+
+<div class="breakdown">
+<div>
+<h4>Execution</h4>
+<p>A three-color system (black, brown, cream, with copper as a single accent — never a fill) carries across cup, card, and poster without needing to be reinvented per format. Montserrat was chosen for the same reason the palette stays to three colors: restraint that still has range, reading clean at a glance but carrying enough weight variation to hold tone shifts across contexts.</p>
+</div>
+<div>
+<h4>Why it holds up</h4>
+<p>Trend-driven identity work ages fast. NOIR is built to last because it isn't chasing a current aesthetic — it's built on a piece of reasoning (a figure, a doorway, an odd letter out) that doesn't expire when the trend does. The same wordmark that anchors a still, moody poster also holds up at cup-sleeve scale and inside a fast-cut Reel storyboard.</p>
+</div>
+</div>
+
+<div class="carousel" style="margin-top:16px; grid-template-columns:1fr;">
+<figure class="full"><div class="frame"><img src="assets/case-studies/noir-brand-sheet.png" alt="NOIR full brand sheet — mockups, palette rationale, and concept exploration"></div></figure>
+</div>
+</div>
+</div>
+
+<div class="case featured dating">
+<div class="case-num">02</div>
+<div>
+<span class="kicker">Research-to-visual translation</span>
+<h3>How Dating Apps Rewire You — Instagram Carousel</h3>
+<p><strong>The brief.</strong> Fifteen-plus strong research angles on dating app psychology — the engagement loop, paradox of choice, thin-slicing, hypergamy and selection dynamics, opportunity cost, and more — individually solid, but stacked together they competed for attention rather than building one argument.</p>
+<p><strong>The process.</strong> Scribble first, structure second, software last. Fifteen candidate ideas were cut down to the three that actually carry the piece — The Reduction (how a person becomes four categories on a form), The Loop (the engagement mechanism that keeps you searching), and How Connection Actually Forms (the real counter-mechanism: shared experience over curated profiles). The full structure was sketched by hand, cover to close, before any software was touched, then rebuilt as a 5-slide carousel in Canva — choosing illustration sets by hand and iterating the cover and icon clusters across multiple passes for a consistent visual language rather than a stock-photo patchwork.</p>
+<span class="tag">Content design · Instagram carousel</span>
+
+<div class="carousel">
+<figure><div class="frame"><img src="assets/case-studies/dating-01-cover.png" alt="Carousel cover — How Dating Apps Rewire You, illustrated couple at a café table"></div><figcaption>01 — Cover</figcaption></figure>
+<figure><div class="frame"><img src="assets/case-studies/dating-02-reduction.png" alt="Slide 01, The Reduction — a person becomes four categories on a form: profession, hobbies, world view, social life"></div><figcaption>02 — The Reduction</figcaption></figure>
+<figure><div class="frame"><img src="assets/case-studies/dating-03-loop.png" alt="Slide 02, The Loop — engagement cycle of scroll, swipe, match, hope/wait, buy premium"></div><figcaption>03 — The Loop</figcaption></figure>
+<figure><div class="frame"><img src="assets/case-studies/dating-04-connection.png" alt="Slide 03, How Connection Really Forms — shared real experience, empathy, vulnerability, support"></div><figcaption>04 — How Connection Forms</figcaption></figure>
+<figure><div class="frame"><img src="assets/case-studies/dating-05-quote.png" alt="Closing slide — You can't swipe your way into shared history"></div><figcaption>05 — Closing line</figcaption></figure>
+</div>
+
+<div class="pull-quote">"Your goal is to leave. The loop's goal is to keep you in it."</div>
+
+<div class="breakdown">
+<div>
+<h4>Role of AI — used for</h4>
+<p>Pressure-testing the argument, not generating it: narrowing fifteen research angles to the three that belonged together, catching redundancy where two separate loop diagrams were saying the same thing twice, and reviewing each Canva export for icon-style consistency, hierarchy, and clutter round by round.</p>
+</div>
+<div>
+<h4>Role of AI — not used for</h4>
+<p>Not used to design the layout, choose the illustrations, or build the file. Every slide was assembled by hand in Canva, image by image, with each visual decision — which icon set, where the arrows sit, what gets cut — made and re-made across several review passes, not generated in one pass.</p>
+</div>
+</div>
+
+<div class="carousel" style="margin-top:16px;">
+<figure class="full"><div class="frame"><img src="assets/case-studies/dating-apps-full-study.png" alt="Full case study page: original hand-drawn scribble next to the final 5-slide carousel"></div></figure>
+</div>
+</div>
+</div>
+
+<div class="case">
+<div class="case-num">03</div>
+<div>
+<h3>KodRank — Vector Rebuild</h3>
+<p>A rough, low-resolution logo redrawn from scratch as a clean, scalable vector — every path rebuilt by hand, ready for print and screen at any size.</p>
+<span class="tag">Vector cleanup</span>
+<div class="shot wide"><img src="assets/Kodrank.png" alt="KodRank logo, redrawn as a clean vector"></div>
+</div>
+</div>
+
+<div class="case">
+<div class="case-num">04</div>
+<div>
+<h3>Poppy — Food Brand Mark</h3>
+<p>A "P" mark for a food brand where the cut-away circle reads as a bowl and the stem doubles as a spoon. A small decorative seed sits at the point where the circle meets the stem — a quiet, literal nod to what the brand actually sells.</p>
+<span class="tag">Logo concept · Food</span>
+<div class="shot"><img src="assets/Poppy-Foods.png" alt="Poppy food brand P mark, shaped like a bowl with a decorative seed"></div>
+<div class="process">
+<figure>
+<div class="frame"><img src="assets/process/poppy-sketch-01.jpg" alt="Early Poppy P mark sketches, loose exploration"></div>
+<figcaption>01 — First passes</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+<div class="case">
+<div class="case-num">05</div>
+<div>
+<h3>Fluxo — SaaS Favicon</h3>
+<p>A geometric "F" built as a square-in-square mark for a SaaS venture — designed to hold its shape and stay legible all the way down to favicon size.</p>
+<span class="tag">Logo concept · SaaS</span>
+<div class="shot"><img src="assets/Fluxo-Favicon.png" alt="Fluxo SaaS favicon, a geometric F in a square mark"></div>
+<div class="process">
+<figure>
+<div class="frame"><img src="assets/process/fluxo-sketch-01.jpg" alt="Fluxo F mark construction, circle test and square-in-square build"></div>
+<figcaption>01 — Circle test to square construction</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+<div class="case">
+<div class="case-num">06</div>
+<div>
+<h3>Sana — Healthcare Brand Kit</h3>
+<p>A full identity system for a healthcare venture: mark, primary and secondary palette, heading and body type pairing, and clear do's and don'ts for how the mark can and can't be used. Built to hand off to a client as a real style guide, not just a logo file.</p>
+<span class="tag">Brand kit · Healthcare</span>
+<div class="shot"><img src="assets/Sana-Brand.png" alt="Sana healthcare brand style guide with mark, palette, and typography"></div>
+<div class="process">
+<figure>
+<div class="frame"><img src="assets/process/sana-sketch-01.jpg" alt="Sana mark exploration, leaf motif and rounded form studies"></div>
+<figcaption>01 — Form and motif studies</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="process">
+<div class="wrap">
+<div class="section-head">
+<h2>How a project runs</h2>
+<span class="mono">Process</span>
+</div>
+<div class="process-steps">
+<div class="pstep">
+<div class="pnum">1</div>
+<div>
+<h4>Intake — read the brief before opening the canvas</h4>
+<p>Every project starts with the actual constraint: who the audience is, what's already been tried, what "done wrong" looks like for this brand specifically. For research-heavy content (like the dating apps carousel), this stage includes gathering and sorting far more raw material than will ever ship — fifteen angles down to three, not three from the start.</p>
+</div>
+</div>
+<div class="pstep">
+<div class="pnum">2</div>
+<div>
+<h4>Sketch — paper before software</h4>
+<p>Concepts get sketched by hand first, structure and all, before Illustrator or Canva opens. This forces the idea to hold up on its own — a mark or a slide structure that only works because of a software effect isn't actually working.</p>
+</div>
+</div>
+<div class="pstep">
+<div class="pnum">3</div>
+<div>
+<h4>Build — hand-built, not auto-generated</h4>
+<p>Vector work is built anchor point by anchor point, never auto-traced. Content layouts (carousels, one-pagers) are assembled image by image, with each visual decision — icon set, arrow placement, what gets cut — made deliberately rather than templated.</p>
+</div>
+</div>
+<div class="pstep">
+<div class="pnum">4</div>
+<div>
+<h4>Pressure-test — AI as critic, not creator</h4>
+<p>AI tools are used the same way across every project: to catch redundancy, flag inconsistency, and stress-test whether an idea actually holds — never to generate the design, layout, or copy itself. That line stays fixed regardless of project type.</p>
+</div>
+</div>
+<div class="pstep">
+<div class="pnum">5</div>
+<div>
+<h4>Deliver — built for every context it'll actually appear in</h4>
+<p>A mark gets checked at cup-sleeve scale and poster scale. A carousel gets checked slide-by-slide for pacing, not just as individual images. The deliverable is judged by whether it holds up outside the file it was built in.</p>
+</div>
+</div>
+</div>
+<p class="process-note"><strong>Where AI fits, precisely:</strong> across every project on this page, AI is used to pressure-test an argument or a design decision — narrowing options, catching redundancy, reviewing consistency round by round. It is never used to design the layout, choose the visuals, or generate the final file. That distinction is deliberate and doesn't change project to project.</p>
+</div>
+</section>
+
+<section id="credentials">
+<div class="wrap">
+<div class="section-head">
+<h2>Training &amp; credentials</h2>
+<span class="mono">DigiSkills · Govt. of Pakistan</span>
+</div>
+<div class="creds">
+<div class="cred">
+<span class="mono">2022</span>
+<h4>Graphic Design</h4>
+<p>DigiSkills Training Program, DSTP2.0-Batch-02 — Jul–Oct 2022</p>
+<div class="cred-footer">
+<span class="cred-id">ID: VHKNBJAMK</span>
+<div class="cred-links">
+<a href="assets/certificates/DSTP_Graphic-Design_2022.pdf" target="_blank" rel="noopener">View PDF</a>
+<a href="https://digiskills.pk/verify" target="_blank" rel="noopener">Verify</a>
+</div>
+</div>
+</div>
+<div class="cred">
+<span class="mono">2022</span>
+<h4>Freelancing</h4>
+<p>DigiSkills Training Program, DSTP2.0-Batch-02 — Jul–Oct 2022</p>
+<div class="cred-footer">
+<span class="cred-id">ID: WKGVG4DMK</span>
+<div class="cred-links">
+<a href="assets/certificates/DSTP_Freelancing_2022.pdf" target="_blank" rel="noopener">View PDF</a>
+<a href="https://digiskills.pk/verify" target="_blank" rel="noopener">Verify</a>
+</div>
+</div>
+</div>
+<div class="cred">
+<span class="mono">2024</span>
+<h4>Creative Writing</h4>
+<p>DigiSkills Training Program, DSTP2.0-Batch-08 — Jul–Oct 2024</p>
+<div class="cred-footer">
+<span class="cred-id">ID: QWAGYBMK5</span>
+<div class="cred-links">
+<a href="assets/certificates/DSTP_Creative-Writing_2024.pdf" target="_blank" rel="noopener">View PDF</a>
+<a href="https://digiskills.pk/verify" target="_blank" rel="noopener">Verify</a>
+</div>
+</div>
+</div>
+<div class="cred">
+<span class="mono">2024</span>
+<h4>Video Editing, Animation &amp; Vlogging</h4>
+<p>DigiSkills Training Program, DSTP2.0-Batch-08 — Jul–Oct 2024</p>
+<div class="cred-footer">
+<span class="cred-id">ID: HVJJ7GAMK</span>
+<div class="cred-links">
+<a href="assets/certificates/DSTP_Video-Editing_2024.pdf" target="_blank" rel="noopener">View PDF</a>
+<a href="https://digiskills.pk/verify" target="_blank" rel="noopener">Verify</a>
+</div>
+</div>
+</div>
+<div class="cred">
+<span class="mono">2026</span>
+<h4>Startup Strategies &amp; Entrepreneurship</h4>
+<p>DigiSkills Training Program, DSTP3.0-Batch-03 — Apr–Jul 2026</p>
+<div class="cred-footer">
+<span class="cred-id">ID: BX4YRRMK5</span>
+<div class="cred-links">
+<a href="assets/certificates/DSTP_Startup-Strategies_2026.pdf" target="_blank" rel="noopener">View PDF</a>
+<a href="https://digiskills.pk/verify" target="_blank" rel="noopener">Verify</a>
+</div>
+</div>
+</div>
+</div>
+<p class="creds-note">All five issued by DigiSkills.pk under Pakistan's Ministry of IT &amp; Telecom, delivered through Virtual University and Ignite. Each can be independently verified at <a href="https://digiskills.pk/verify" target="_blank" rel="noopener">digiskills.pk/verify</a> using the certificate ID shown.</p>
+</div>
+</section>
+
+<section id="services">
+<div class="wrap">
+<div class="section-head">
+<h2>Services</h2>
+<span class="mono">What I offer</span>
+</div>
+<div class="services">
+<div class="service">
+<div>
+<h4>Minimal logo &amp; brand identity design</h4>
+<p>A mark, colour palette, and type pairing built from a proper brief — not a template.</p>
+</div>
+</div>
+<div class="service">
+<div>
+<h4>Vector redraw &amp; logo cleanup</h4>
+<p>Turn a rough or low-resolution logo into a clean, scalable vector, ready for print and screen.</p>
+</div>
+</div>
+<div class="service">
+<div>
+<h4>Brand style guides</h4>
+<p>A one-page reference covering palette, typography, and usage rules, for teams that need consistency.</p>
+</div>
+</div>
+<div class="service">
+<div>
+<h4>Research-to-visual content design</h4>
+<p>Turn dense research or a scattered set of ideas into a structured carousel, one-pager, or slide set — the argument comes first, the software second.</p>
+</div>
+</div>
+<div class="service">
+<div>
+<h4>Health &amp; research-adjacent brand content</h4>
+<p>An MBBS and research background brings real fluency to healthcare and wellness branding.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer id="contact">
+<div class="wrap">
+<h2>Have a brand that needs a proper look?</h2>
+<p class="hero-sub">Tell me about the business, the audience, and what's not working yet — I'll take it from there.</p>
+<div class="contact-links">
+<a href="mailto:khuzemaahmed077@gmail.com">khuzemaahmed077@gmail.com</a>
+<a href="https://www.linkedin.com/in/khuzema-ahmed-298865220/" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://www.upwork.com/freelancers/~01dfe0c882c23f804e" target="_blank" rel="noopener">Upwork profile</a>
+</div>
+<div class="foot-note">Khuzema — Brand &amp; Identity Design</div>
+</div>
+</footer>
+
+</body>
+</html>
